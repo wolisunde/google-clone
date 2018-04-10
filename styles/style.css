@@ -60,32 +60,25 @@ table {
 header {
 	height: 30px;
 	margin: 10px;
-	text-decoration: none;;
 	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
-	position: relative;
+	font-size: 14;
+	text-decoration: none;
 }
 
-header .container {
-	position: absolute;
+header ul {
+	height: 30px;
 }
 
-header .container ul {
-	
-}
-
-header .container ul li {
+header li {
 	display: inline;
-	
-	vertical-align: middle;
+	height: 29px;
 }
 
 #left {
-	float: left;
-	clear: right;
+	float: right;
+	
+}
+#right {
+	clear: both;
 }
 
-#right {
-	float: right;
-	/*clear:left;
-}
