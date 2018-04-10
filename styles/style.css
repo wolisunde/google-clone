@@ -53,32 +53,129 @@ table {
 
 
 /*----------------------------------------------------------------------------------
- 	HEADER
+ 	GENERAL
 */
 
 
-header {
-	height: 30px;
-	margin: 10px;
+html {
 	font-family: 'Roboto', sans-serif;
-	font-size: 14;
+	font-size: 12;
 	text-decoration: none;
 }
 
-header ul {
+.wrapper {
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-auto-rows: minmax(30px, auto);
+	grid-gap: 1em;
+}
+
+.wrapper > div {
+
+	padding:1em;
+}
+
+/*----------------------------------------------------------------------------------
+ 	NAV
+*/
+
+
+#nav {
+	grid-column: 1/4;
+	background: #eee;
+	padding: .3em;
+}
+
+#nav ul{
 	height: 30px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items:center;
 }
 
-header li {
-	display: inline;
-	height: 29px;
+#navright{
+	justify-self:end;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	align-items:center;
 }
 
-#left {
-	float: right;
-	
-}
-#right {
-	clear: both;
+#nav ul li{
+	display:inline;
+	margin-left:1em;
+	font-size: 12px;
 }
 
+
+/*----------------------------------------------------------------------------------
+ 	SEARCH
+*/
+
+
+#logo {
+	grid-column: 1/4;
+	grid-row:2/3;
+	align-self: bottom;
+	justify-self: center;
+	margin-top:95px;
+}
+
+#search {
+	grid-column: 1/4;
+	justify-self:center;
+	border: 1px solid black;
+	height: .1em;
+	width: 600px;
+}
+
+#buttons {
+	grid-column:1/4;
+	justify-content: center;
+
+	display: grid;
+	grid-template-columns: repeat(2, auto)
+}
+
+#buttons div {
+	margin: 10px;
+	padding: 10px;
+	font-size: 12px;
+	background: #eee;
+}
+
+
+/*----------------------------------------------------------------------------------
+ 	FOOTER
+*/
+
+
+#footer {
+	width:99%;
+	display: grid;
+	grid-template-columns: repeat(2, auto)
+
+	height: 30px;
+	position: absolute;
+	bottom: 0px;
+	background: #eee;
+}
+
+#footer ul{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items:center;
+}
+
+#footright{
+	margin-right: 1em;
+	justify-self:end;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	align-items:center;
+}
+
+#footer ul li{
+	display:inline;
+	margin-left:1em;
+	font-size: 12px;
+}
